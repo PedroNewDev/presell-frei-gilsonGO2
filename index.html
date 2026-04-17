@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meditação da Palavra – Frei Gilson</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✝</text></svg>" />
+  <script>
+    window.googlePixelId = "69e2455d0696900889ab8fcd";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+    document.head.appendChild(a);
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@600;700;800&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Roboto+Condensed:wght@700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ──────────────────────────────────────────────
+       VARIÁVEIS CSS
+    ────────────────────────────────────────────── */
+    :root {
+      --cor-fundo:        #091508;
+      --cor-fundo-2:      #0c1c0b;
+      --cor-fundo-3:      #0f2210;
+      --cor-card:         #122814;
+      --cor-rodape:       #060e06;
+      --cor-dourado:      #D4A843;
+      --cor-dourado-hover:#e8c060;
+      --cor-dourado-sutil:#b8913a;
+      --cor-texto:        #eef2ee;
+      --cor-texto-suave:  #8ab89a;
+      --cor-texto-cinza:  #4d7a5d;
+      --cor-borda:        #163018;
+      --cor-borda-dourada:rgba(212, 168, 67, 0.28);
+      --raio:             8px;
+      --fonte:            'Poppins', sans-serif;
+    }
+
+    /* ──────────────────────────────────────────────
+       RESET & BASE
+    ────────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--fonte);
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* ──────────────────────────────────────────────
+       FADE-IN (animação de entrada)
+    ────────────────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .fade-in.visivel {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ──────────────────────────────────────────────
+       HEADER
+    ────────────────────────────────────────────── */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(6, 18, 6, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--cor-borda);
+      padding: 12px 32px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .header-marca {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .header-foto {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--cor-dourado);
+      flex-shrink: 0;
+    }
+
+    .header-nome {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .header-nome span {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--cor-dourado);
+      text-transform: uppercase;
+    }
+
+    .header-bencao {
+      font-size: 0.78rem;
+      font-style: italic;
+      color: var(--cor-dourado);
+      opacity: 0.9;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 520px) {
+      header {
+        padding: 10px 18px;
+      }
+      .header-bencao {
+        font-size: 0.68rem;
+        white-space: normal;
+        max-width: 120px;
+        text-align: right;
+      }
+    }
+
+    /* ──────────────────────────────────────────────
+       HERO
+    ────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(212,168,67,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 100% 100%, rgba(20,70,30,0.4) 0%, transparent 55%),
+        var(--cor-fundo-2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        radial-gradient(circle at 20% 80%, rgba(212,168,67,0.04) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(20,70,30,0.18) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 820px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cor-dourado);
+      margin-bottom: 20px;
+      padding: 6px 16px;
+      border: 1px solid var(--cor-borda-dourada);
+      border-radius: 99px;
+      background: rgba(212, 168, 67, 0.07);
+    }
+
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '✦';
+      font-size: 0.55rem;
+      opacity: 0.7;
+    }
+
+    .hero-titulo {
+      font-size: clamp(1.6rem, 4.2vw, 2.8rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-subtitulo {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 400;
+      color: var(--cor-dourado);
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-linha {
+      width: 56px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--cor-dourado), transparent);
+      margin: 0 auto 26px;
+      border-radius: 99px;
+    }
+
+    .hero-texto {
+      font-size: clamp(0.92rem, 2vw, 1.05rem);
+      color: var(--cor-texto-suave);
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+
+    /* CTA Button */
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #D4A843 0%, #c49a38 100%);
+      color: #091508;
+      font-family: var(--fonte);
+      font-size: clamp(0.85rem, 2.2vw, 1rem);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 18px 40px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow:
+        0 4px 20px rgba(212, 168, 67, 0.35),
+        0 2px 6px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-cta:hover {
+      background: linear-gradient(135deg, #e8c060 0%, #D4A843 100%);
+      box-shadow:
+        0 6px 30px rgba(212, 168, 67, 0.55),
+        0 2px 8px rgba(0,0,0,0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-cta:hover::before {
+      left: 100%;
+    }
+
+    .btn-cta:active {
+      transform: translateY(0);
+    }
+
+    .btn-cta {
+      animation: pulse-dourado 2.8s ease-in-out infinite;
+    }
+
+    .btn-cta:hover {
+      animation: none;
+    }
+
+    @keyframes pulse-dourado {
+      0%, 100% {
+        box-shadow:
+          0 4px 20px rgba(212, 168, 67, 0.35),
+          0 2px 6px rgba(0,0,0,0.4);
+      }
+      50% {
+        box-shadow:
+          0 4px 36px rgba(212, 168, 67, 0.60),
+          0 2px 6px rgba(0,0,0,0.4);
+      }
+    }
+
+    .hero-nota {
+      margin-top: 18px;
+      font-size: 0.72rem;
+      color: var(--cor-texto-cinza);
+      letter-spacing: 0.04em;
+    }
+
+    /* ──────────────────────────────────────────────
+       CARD ESTILO YOUTUBE — RÉPLICA EXATA
+    ────────────────────────────────────────────── */
+
+    .yt-card-wrap {
+      width: 100%;
+      max-width: 740px;
+      margin: 0 auto 36px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.70),
+        0 0 0 1px rgba(255, 255, 255, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .yt-card-wrap:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 32px 80px rgba(0, 0, 0, 0.78),
+        0 0 0 1px rgba(255, 255, 255, 0.10);
+    }
+
+    .yt-thumbnail {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #1a0e06;
+      overflow: hidden;
+    }
+
+    .thumb-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: radial-gradient(ellipse at 72% 48%, #3d2010 0%, #1e1005 45%, #0d0704 100%);
+    }
+
+    .thumb-friar-area {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .thumb-friar-area img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 82% 8%;
+      filter: brightness(0.88) saturate(0.72);
+    }
+
+    .thumb-golden-glow {
+      position: absolute;
+      top: 10%;
+      left: -20%;
+      width: 80%;
+      height: 80%;
+      background: radial-gradient(ellipse, rgba(212,168,67,0.38) 0%, rgba(180,120,20,0.12) 45%, transparent 72%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .thumb-left-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(
+        to right,
+        rgba(10,5,2,1.00)  0%,
+        rgba(10,5,2,1.00) 48%,
+        rgba(10,5,2,0.85) 58%,
+        rgba(10,5,2,0.35) 72%,
+        rgba(10,5,2,0.05) 86%,
+        rgba(10,5,2,0.00) 100%
+      );
+    }
+
+    .thumb-vignette {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background:
+        radial-gradient(ellipse at center, transparent 48%, rgba(0,0,0,0.68) 100%),
+        linear-gradient(to bottom, rgba(0,0,0,0.42) 0%, transparent 20%),
+        linear-gradient(to top,    rgba(0,0,0,0.58) 0%, transparent 30%);
+      pointer-events: none;
+    }
+
+    .thumb-content {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4.5% 5% 4%;
+      width: 52%;
+    }
+
+    .thumb-cross {
+      font-size: clamp(0.55rem, 1.3vw, 0.82rem);
+      color: #D4A843;
+      opacity: 0.38;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.12em;
+    }
+
+    .thumb-titles {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 2%;
+    }
+
+    .thumb-title-main {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(0.82rem, 2.6vw, 1.6rem);
+      color: #D4A843;
+      line-height: 1.08;
+      letter-spacing: 0.04em;
+      text-shadow:
+        0 0 22px rgba(212,168,67,0.65),
+        0 2px 8px rgba(0,0,0,0.95),
+        0 0 45px rgba(212,168,67,0.28);
+      margin: 0;
+    }
+
+    .thumb-title-sub {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(0.68rem, 2.1vw, 1.28rem);
+      color: #D4A843;
+      line-height: 1.1;
+      letter-spacing: 0.07em;
+      text-shadow:
+        0 0 18px rgba(212,168,67,0.5),
+        0 2px 8px rgba(0,0,0,0.9);
+      margin: 2px 0 0;
+    }
+
+    .thumb-ornament {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: clamp(5px, 1.2vw, 12px);
+      width: 90%;
+    }
+
+    .thumb-ornament span:not(.thumb-orn-gem) {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right,
+        rgba(212,168,67,0.08),
+        rgba(212,168,67,0.72),
+        rgba(212,168,67,0.08)
+      );
+    }
+
+    .thumb-orn-gem {
+      color: #D4A843;
+      font-size: clamp(0.38rem, 0.85vw, 0.55rem);
+      opacity: 0.82;
+      flex-shrink: 0;
+    }
+
+    .thumb-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .thumb-schedule-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.40rem, 0.95vw, 0.60rem);
+      font-weight: 600;
+      color: rgba(255,255,255,0.68);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      line-height: 1.3;
+      margin: 0 0 1px;
+    }
+
+    .thumb-hour-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.62rem, 1.75vw, 1.08rem);
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin: 0 0 clamp(4px, 1vw, 9px);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.85);
+    }
+
+    .thumb-live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #CC0000;
+      padding: clamp(4px, 0.8vw, 7px) clamp(10px, 2vw, 16px);
+      border-radius: 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.52rem, 1.15vw, 0.72rem);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.04em;
+      width: fit-content;
+      white-space: nowrap;
+    }
+
+    .thumb-live-dot {
+      width: clamp(7px, 1.2vw, 10px);
+      height: clamp(7px, 1.2vw, 10px);
+      border-radius: 50%;
+      background: #ff4444;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    /* ──────────────────────────────────────────────
+       PROVA SOCIAL
+    ────────────────────────────────────────────── */
+    .prova-social {
+      background: var(--cor-fundo-3);
+      padding: 64px 24px;
+      border-top: 1px solid var(--cor-borda);
+      border-bottom: 1px solid var(--cor-borda);
+    }
+
+    .prova-social-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .prova-social-titulo {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cor-dourado);
+      margin-bottom: 36px;
+      opacity: 0.8;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+    }
+
+    .card {
+      background: var(--cor-card);
+      border: 1px solid var(--cor-borda-dourada);
+      border-radius: var(--raio);
+      padding: 32px 24px;
+      text-align: center;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: rgba(212, 168, 67, 0.65);
+      transform: translateY(-3px);
+    }
+
+    .card-icone {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .card-numero {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--cor-dourado);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .card-texto {
+      font-size: 0.82rem;
+      color: var(--cor-texto-suave);
+      line-height: 1.5;
+    }
+
+    /* ──────────────────────────────────────────────
+       RODAPÉ
+    ────────────────────────────────────────────── */
+    footer {
+      background: var(--cor-rodape);
+      padding: 48px 24px 28px;
+      border-top: 1px solid #0e2010;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-termos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 8px;
+      margin-bottom: 28px;
+    }
+
+    .footer-termos a {
+      font-size: 0.75rem;
+      color: #4a7a5a;
+      transition: color 0.2s ease;
+    }
+
+    .footer-termos a:hover {
+      color: var(--cor-dourado);
+    }
+
+    .footer-termos .sep {
+      color: #1e3a22;
+      font-size: 0.75rem;
+      user-select: none;
+    }
+
+    .footer-disclaimers {
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .disclaimer-bloco {
+      font-size: 0.7rem;
+      color: #2d5a38;
+      line-height: 1.65;
+      text-align: left;
+    }
+
+    .disclaimer-bloco strong {
+      color: #3e7a50;
+      font-weight: 600;
+    }
+
+    .footer-separador-disc {
+      width: 100%;
+      height: 1px;
+      background: #0e2010;
+      margin: 8px 0;
+    }
+
+    .footer-empresa {
+      font-size: 0.68rem;
+      color: #2d5038;
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .footer-empresa strong {
+      color: #3e6a4a;
+    }
+
+    .footer-divisor {
+      width: 100%;
+      height: 1px;
+      background: #0e2010;
+      margin-bottom: 18px;
+    }
+
+    .footer-copyright {
+      font-size: 0.68rem;
+      color: #244a2e;
+      letter-spacing: 0.04em;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════
+       HEADER
+  ════════════════════════════════ -->
+  <header>
+    <div class="header-inner">
+      <div class="header-marca">
+        <img
+          class="header-foto"
+          src="https://yt3.googleusercontent.com/7Suu73tWOGZ4IZZR-1IlQ7AbIpefrMMZZAfEdO8mk0n41pin0Yq0eLdYBuY2suRSnG4XDA9ltQ=s160-c-k-c0x00ffffff-no-rj"
+          alt="Frei Gilson"
+          loading="lazy"
+        />
+        <div class="header-nome">
+          Frei Gilson
+          <span>Ministério Oficial</span>
+        </div>
+      </div>
+      <p class="header-bencao">"Que Deus te abençoe sempre"</p>
+    </div>
+  </header>
+
+
+  <!-- ════════════════════════════════
+       HERO
+  ════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="fade-in">
+        <span class="hero-eyebrow">Mensagem Especial</span>
+      </div>
+
+      <h1 class="hero-titulo fade-in" style="transition-delay:0.1s">
+        Oração do Grimório de São Bento
+      </h1>
+
+      <p class="hero-subtitulo fade-in" style="transition-delay:0.2s">
+        A Palavra que fortalece a sua caminhada
+      </p>
+
+      <div class="hero-linha fade-in" style="transition-delay:0.25s"></div>
+
+      <!-- Card estilo YouTube -->
+      <div class="yt-card-wrap fade-in" id="vsl" style="transition-delay:0.3s; cursor:pointer;" onclick="window.location='/mensagem-especial'">
+        <div class="yt-thumbnail">
+
+          <!-- BACKGROUND -->
+          <div class="thumb-bg"></div>
+
+          <!-- FRIAR silhouette (right side) -->
+          <div class="thumb-friar-area">
+            <div class="thumb-golden-glow"></div>
+            <img
+              src="https://i.ytimg.com/vi/u2EQ0qaG0XY/maxresdefault.jpg"
+              alt="Frei Gilson"
+              loading="eager"
+            />
+          </div>
+
+          <!-- LEFT OVERLAY -->
+          <div class="thumb-left-overlay"></div>
+          <!-- VIGNETTE -->
+          <div class="thumb-vignette"></div>
+
+          <!-- CONTENT -->
+          <div class="thumb-content">
+            <div class="thumb-cross">✝ &nbsp; SÉRIE ESPECIAL</div>
+
+            <div class="thumb-titles">
+              <h2 class="thumb-title-main">GRIMÓRIO SAGRADO</h2>
+              <h2 class="thumb-title-sub">DE SÃO BENTO</h2>
+              <div class="thumb-ornament">
+                <span></span><span class="thumb-orn-gem">✦</span><span></span>
+              </div>
+            </div>
+
+            <div class="thumb-bottom">
+              <div class="thumb-live-badge">
+                <span class="thumb-live-dot"></span>
+                Ao Vivo Agora
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /yt-thumbnail -->
+      </div><!-- /yt-card-wrap -->
+
+      <div class="fade-in" style="transition-delay:0.5s">
+        <a href="/mensagem-especial" class="btn-cta">
+          ▶&nbsp;&nbsp;Assista agora a mensagem especial
+        </a>
+        <p class="hero-nota">✦ Acesso gratuito · Conteúdo espiritual</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       PROVA SOCIAL
+  ════════════════════════════════ -->
+  <section class="prova-social">
+    <div class="prova-social-inner">
+      <p class="prova-social-titulo">Uma obra fruto da fé</p>
+
+      <div class="cards-grid">
+
+        <div class="card fade-in">
+          <div class="card-icone">✝️</div>
+          <div class="card-numero">+500 mil</div>
+          <p class="card-texto">Vidas tocadas e transformadas pela Palavra de Deus</p>
+        </div>
+
+        <div class="card fade-in" style="transition-delay:0.12s">
+          <div class="card-icone">🤍</div>
+          <div class="card-numero">Comunidade</div>
+          <p class="card-texto">De fé, esperança e amor ao próximo que cresce a cada dia</p>
+        </div>
+
+        <div class="card fade-in" style="transition-delay:0.24s">
+          <div class="card-icone">📖</div>
+          <div class="card-numero">Palavra Viva</div>
+          <p class="card-texto">Reflexões diárias que renovam o coração e nutrem o espírito</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       RODAPÉ
+  ════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <!-- Links de termos -->
+      <nav class="footer-termos" aria-label="Links legais">
+        <a href="#" onclick="openDoc('terms');return false;">Termos de Uso</a>
+        <span class="sep">|</span>
+        <a href="#" onclick="openDoc('privacy');return false;">Política de Privacidade</a>
+        <span class="sep">|</span>
+        <a href="#" onclick="openDoc('disclaimer');return false;">Disclaimer</a>
+      </nav>
+
+      <!-- Disclaimers -->
+      <div class="footer-disclaimers">
+        <p class="disclaimer-bloco">
+          <strong>Aviso Legal:</strong> Este conteúdo é de caráter espiritual e devocional.
+          Não substitui acompanhamento pastoral, psicológico ou médico profissional.
+          Procure orientação qualificada para questões específicas de saúde ou bem-estar.
+          Os resultados espirituais são pessoais e podem variar de pessoa para pessoa.
+        </p>
+        <div class="footer-separador-disc"></div>
+        <p class="disclaimer-bloco">
+          <strong>Divulgação de Marketing:</strong> Este site é uma página de divulgação online.
+          O proprietário possui relação comercial com os produtos e serviços anunciados.
+          O proprietário recebe compensação quando um lead qualificado é indicado, sendo esta
+          a extensão total da relação.
+        </p>
+        <div class="footer-separador-disc"></div>
+        <p class="disclaimer-bloco">
+          <strong>Divulgação Publicitária:</strong> Este site, bem como os produtos e serviços
+          mencionados, são espaços publicitários. Este site é um anúncio e não uma publicação
+          jornalística. Quaisquer fotos de pessoas utilizadas são meramente ilustrativas.
+          O proprietário deste site oferece apenas um serviço que permite aos consumidores
+          obter e comparar ofertas.
+        </p>
+      </div>
+
+      <!-- Dados da empresa -->
+      <address class="footer-empresa">
+        <strong>ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA</strong><br />
+        CNPJ: <strong>90.863.481/0001-51</strong><br />
+        R BURITI, 74, 2 PISO, CENTRO – SANTA ROSA – RS – 98780-753 – Brasil
+      </address>
+
+      <!-- Divisor e copyright -->
+      <div class="footer-divisor"></div>
+      <p class="footer-copyright">
+        © 2026 ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA. Todos os direitos reservados.
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- ════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════ -->
+  <script>
+    // ── Fade-in ao scroll (Intersection Observer) ──
+    (function () {
+      var elementos = document.querySelectorAll('.fade-in');
+
+      if (!('IntersectionObserver' in window)) {
+        elementos.forEach(function (el) { el.classList.add('visivel'); });
+        return;
+      }
+
+      var observador = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (entrada) {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add('visivel');
+            observador.unobserve(entrada.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      elementos.forEach(function (el) { observador.observe(el); });
+    })();
+
+
+    // ── Reforço do efeito hover no botão CTA (extra brilho) ──
+    (function () {
+      var btn = document.querySelector('.btn-cta');
+      if (!btn) return;
+
+      btn.addEventListener('mouseenter', function () {
+        btn.style.letterSpacing = '0.09em';
+      });
+
+      btn.addEventListener('mouseleave', function () {
+        btn.style.letterSpacing = '0.06em';
+      });
+    })();
+  </script>
+
+  <script>
+    var _docs = {
+      terms: {
+        title: "Terms of Use – ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA",
+        body: `
+          <h1>Terms of Use</h1>
+          <p class="updated">Last updated: 2026</p>
+          <p>These Terms of Use govern the access and use of the website operated by ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA, registered under CNPJ 90.863.481/0001-51.</p>
+          <h2>1. Acceptance of Terms</h2>
+          <p>By accessing this website, you agree to comply with these Terms of Use and the Privacy Policy.</p>
+          <p>If you do not agree with these terms, you should discontinue use of the website.</p>
+          <h2>2. Website Usage</h2>
+          <p>Users agree to use this website responsibly and in compliance with applicable laws. Users must not:</p>
+          <ul><li>Use the website for illegal activities</li><li>Attempt to gain unauthorized access to the system</li><li>Distribute harmful software or malicious content</li></ul>
+          <h2>3. Intellectual Property</h2>
+          <p>All content on this website, including text, graphics, logos, and design elements, is protected by intellectual property laws. Reproduction or distribution without permission is prohibited.</p>
+          <h2>4. Limitation of Liability</h2>
+          <p>The company is not responsible for:</p>
+          <ul><li>Temporary interruptions of the website</li><li>Damages caused by misuse of the website</li><li>Content provided by third-party websites linked on this site</li></ul>
+          <h2>5. Changes to the Terms</h2>
+          <p>We reserve the right to modify these Terms of Use at any time to comply with legal requirements or improve our services.</p>
+          <h2>6. Governing Law</h2>
+          <p>These Terms shall be governed by the laws of the Federative Republic of Brazil.</p>
+        `
+      },
+      privacy: {
+        title: "Privacy Policy – ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA",
+        body: `
+          <h1>Privacy Policy</h1>
+          <p class="updated">Last updated: 2026</p>
+          <p>This Privacy Policy describes how ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA, registered under CNPJ 90.863.481/0001-51, located at R BURITI, 74, 2 PISO, CENTRO – SANTA ROSA – RS – ZIP Code 98780-753 – Brazil, collects, uses, and protects personal information when you use our website.</p>
+          <h2>1. Information We Collect</h2>
+          <p>When using our website, we may collect:</p>
+          <ul><li>Name</li><li>Email address</li><li>Phone number</li><li>Information submitted through forms</li><li>Technical information such as IP address, browser type, and cookies</li></ul>
+          <h2>2. How We Use the Information</h2>
+          <p>The information collected may be used to:</p>
+          <ul><li>Respond to customer inquiries</li><li>Provide information about our services</li><li>Improve website functionality and user experience</li><li>Maintain security and prevent fraudulent activity</li></ul>
+          <h2>3. Sharing of Information</h2>
+          <p>We do not sell or rent personal information. Information may be shared only when necessary for:</p>
+          <ul><li>Compliance with legal obligations</li><li>Service providers that help operate the website or business systems</li></ul>
+          <h2>4. Cookies</h2>
+          <p>Our website may use cookies to improve user experience, analyze website traffic, and customize content. Users can disable cookies through their browser settings.</p>
+          <h2>5. Data Protection</h2>
+          <p>We implement appropriate security measures to protect personal information against unauthorized access, misuse, or disclosure.</p>
+          <h2>6. User Rights (LGPD)</h2>
+          <p>In accordance with the Brazilian General Data Protection Law (LGPD), users have the right to:</p>
+          <ul><li>Request access to their personal data</li><li>Correct inaccurate data</li><li>Request deletion of their information</li><li>Withdraw consent for data processing</li></ul>
+          <h2>7. Contact</h2>
+          <p>ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA &nbsp;|&nbsp; CNPJ: 90.863.481/0001-51<br>R BURITI, 74, 2 PISO, CENTRO – SANTA ROSA – RS – 98780-753 – Brazil</p>
+        `
+      },
+      disclaimer: {
+        title: "Disclaimer – ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA",
+        body: `
+          <h1>Disclaimer</h1>
+          <p class="updated">Last updated: 2026</p>
+          <p>The information provided on this website is for general informational purposes only.</p>
+          <p>This website is operated by ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA, registered under CNPJ 90.863.481/0001-51, located at R BURITI, 74, 2 PISO, CENTRO – SANTA ROSA – RS – 98780-753 – Brazil.</p>
+          <h2>1. General Disclaimer</h2>
+          <p>All information on this website is provided in good faith. However, we make no guarantees regarding completeness, accuracy, or reliability of the information presented. Any action taken based on information found on this website is strictly at your own risk.</p>
+          <h2>2. External Links</h2>
+          <p>Our website may contain links to third-party websites. We do not control or guarantee the accuracy or reliability of information on external websites.</p>
+          <h2>3. Professional Disclaimer</h2>
+          <p>Information on this website does not constitute legal, financial, or professional advice. Users should seek appropriate professional guidance before making decisions based on website information.</p>
+          <h2>4. Limitation of Liability</h2>
+          <p>Under no circumstances shall ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA be liable for any loss or damage resulting from the use of this website.</p>
+        `
+      }
+    };
+
+    function openDoc(key) {
+      var doc = _docs[key];
+      var css = [
+        "* { margin:0; padding:0; box-sizing:border-box; }",
+        "body { font-family: 'Roboto','Arial',sans-serif; background:#0f0f0f; color:#d4d4d4; line-height:1.8; }",
+        ".wrap { max-width:820px; margin:0 auto; padding:60px 32px; }",
+        "h1 { font-size:28px; color:#f1f1f1; margin-bottom:6px; }",
+        ".updated { font-size:13px; color:#777; margin-bottom:40px; }",
+        "h2 { font-size:14px; color:#f1f1f1; margin:32px 0 10px; text-transform:uppercase; letter-spacing:.05em; }",
+        "p { margin-bottom:12px; font-size:14px; }",
+        "ul { padding-left:20px; margin-bottom:12px; font-size:14px; }",
+        "ul li { margin-bottom:6px; }",
+        ".back { display:inline-block; margin-bottom:32px; font-size:13px; color:#777; text-decoration:none; cursor:pointer; }",
+        ".back:hover { color:#f1f1f1; }",
+        "hr { border:none; border-top:1px solid #222; margin:40px 0; }",
+        ".footer-info { font-size:13px; color:#555; }"
+      ].join(" ");
+
+      var html = '<!DOCTYPE html><html lang="en"><head>'
+        + '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">'
+        + '<title>' + doc.title + '</title>'
+        + '<style>' + css + '</style>'
+        + '</head><body><div class="wrap">'
+        + '<a class="back" onclick="window.close()">← Fechar</a>'
+        + doc.body
+        + '<hr><p class="footer-info">ASSOC DOS BARB CABEL INST DE BELEZA E SIMIL DE S ROSA &nbsp;|&nbsp; CNPJ: 90.863.481/0001-51<br>'
+        + 'R BURITI, 74, 2 PISO, CENTRO – SANTA ROSA – RS – 98780-753 – Brasil</p>'
+        + '</div></body></html>';
+
+      var w = window.open('', '_blank');
+      w.document.write(html);
+      w.document.close();
+    }
+  </script>
+
+</body>
+</html>
